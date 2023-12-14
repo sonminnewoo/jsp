@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        table{
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+        }
+
+        /*
+        문법 jsp 문법 
+        border-collapse: separate | collapse | initial | inherit
+        separate : 표(table)의 테두리와 셀(td)의 테두리 사이에 간격을 둡니다.
+        collapse : 표(table)의 테두리와 셀(td)의 테두리 사이의 간격을 없앱니다. 겹치는 부분은 한 줄로 나타냅니다.
+        initial : 기본값으로 설정합니다.
+        inherit : 부모 요소의 속성값을 상속받습니다.
+        */
+
+    </style>
+    <script>
+
+        var x = 0;
+        while(x < 10){ //결과 : 0123456789
+            document.write(x+',');
+            x++; // 이게 없으면 당연히 무한루프
+        }
+
+        document.write("<br>")
+        
+        var y = 10 ;
+        do {
+            document.write(y+',');
+            y++;
+        } while(y<20);
+        
+        document.write("<br>")
+
+        for(var i=0; i<10; i++){
+            document.write(i+',');
+        }
+
+        document.write("<br>")
+        
+        var table = '<table> <tr>';
+        // 테이블에서 td 테그는 한칸을 의미하고 
+        // tr 테그는 한줄을 의미한다
+        
+        for(var i=1; i<=9; i++) {
+            table+='<tr>'
+            if(i%2==0) {
+                continue; // 현재 출력을 스킵하고 다음 반복을 실행
+            }
+            if(i>5) {
+                break; // 반복을 종료.
+            }
+            for(var j=2; j<=9; j++) {
+            table+='<td>'+2+'*'+i+'='+2*i+'한칸마다 td'+'</td>';
+            }
+            table+='<td>'+'한줄마다tr'+'<td>'+'</tr>';
+        }
+        table += '</tr></table>';
+
+        document.writeln(table);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

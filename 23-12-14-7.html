@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문</title>
+    <script>
+        // var score = prompt('점수를 입력해주세요','');
+        // if(score>=60){
+        //     document.write('합격입니다.');
+        // } else if(score>=40) {
+        //     document.write('40점 이상입니다.');
+        // } else {
+        //     document.write('불합격입니다.');
+        // }
+        // html , css , javascript 점수를 입력 받아 평균이 60 점 이상이면 합격이고 
+        // 각 과목이 40 점 이상이어야 합격입니다. 그외에는 모두 불합격입니다.
+        // 학격 : 평균  00 점으로 합격 입니다.
+        // 불합격 : html 40 점 미만으로 불합격 입니다. ( 각과목) / 평균 60 미만으로 불합격 입니다.
+
+        var html = Number(prompt('html 점수를 입력해주세요',''));
+        var css = Number(prompt('css 점수를 입력해주세요',''));
+        var javascript = Number(prompt('javascript 점수를 입력해주세요',''));
+        
+        if(html>=40 && css>=40 && javascript >=40) {
+            var avg = (html +css + javascript) /3;
+            if(avg>=60) {
+                document.write('평균 60 점 이상으로 합격 입니다');
+            } else {
+                document.write('평균 60 점 미만으로 불합격 입니다.');
+            }
+        } else {
+            if(html<40){
+                document.write('html'+html+ '은 40점 미만으로 불합격 입니다 .');
+            }else if(css<40) {
+                document.write('css '+css+'은 40점 미만으로 불합격 입니다 .');
+            }else {
+                document.write('javascript' +javascript+ '은 40점 미만으로 불합격 입니다 .');
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
