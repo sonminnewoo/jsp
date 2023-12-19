@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      border-collapse: collapse;
+    }
+    td{
+      border: 1px solid black;
+    }
+  </style>
+  <script>
+    var x = 0;
+    while(x < 10){
+      document.write(x+',');
+      x++;
+    }
+    document.write("<br>")
+    var y = 10;
+    do{
+      document.write(y+',');
+      y++;
+    }while(y<20);
+    document.write('<br>');
+    for(var i=0; i<10; i++){
+      document.write(i+',');
+    }
+
+    var table = '<table>';
+    for(var i=2; i<=9; i++){
+      table += '<tr>';
+      if(i%2==0){
+        continue; // 아래의 내용을 실행하지 않고 다음 반복을 실행
+      }
+      if(i>5){
+        break; // 반복을 중지하고 반복문 빠져나갑니다.
+      }
+      for(var j=1; j<=9; j++){
+          table+='<td>'+i+'*'+j+'='+i*j+'</td>';
+      }
+      table+='</tr>'
+    }
+    table += '</table>'
+    document.write(table);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

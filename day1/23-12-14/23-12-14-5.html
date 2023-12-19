@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //number : 숫자형
+    var num1 = 10;
+    var num2 = 10.2;
+    document.write(num1+","+num2+"<br>");
+    //string : 문자열
+    var str1 = '문자1';
+    var str2 = "문자2";
+    var str3 = '문자는 "문자"';
+    var str4 = '문자는\' 문자';
+    document.write(str1+","+str2+","+str3+","+str4+"<br>");
+    //boolean : 논리형
+    var com1 = (5>4)
+    var com2 = (5<4)
+    document.write(com1+","+com2+"<br>");
+    //undefined : 변수는 선언하였으나 초기화하지 않았을때 자동으로 설정되는 타입
+    var storage;
+    document.write(storage+"<br>");
+    console.log(storage);
+    //null : 변수를 초기화 하였으나 데이터가 존재하지 않거나 수동으로 초기화를 하였을때
+    var gnb = document.getElementById('gnb');
+    document.write(gnb+"<br>");
+    console.log(gnb);
+    //typeof : 데이터 타입 확인 명령어
+    document.write(typeof num1+","+typeof str1+","
+    +typeof com1+","+typeof storage+","+typeof gnb);
+
+  </script>
+</head>
+<body>
+  <h1 id="gnb"></h1>
+  <script>
+    var gnb = document.getElementById('gnb');
+    document.write(gnb+"<br>");
+    console.log(gnb);
+  </script>
+</body>
+</html>

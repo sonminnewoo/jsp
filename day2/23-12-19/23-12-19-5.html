@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //Number객체
+    var num1 = 10.523456;
+    //toFixed() : 소수점 자릿수(반올림)를 출력하는 함수
+    console.log(num1.toFixed())
+    console.log(num1.toFixed(1))
+    console.log(num1.toFixed(2))
+    var num2 = new Number(12);
+    //toString(n) : n진수로 변환
+    console.log(num2.toString(2)) //2진수 변환
+    console.log(num2.toString(16))// 16진수 변환 0~9abcdef
+
+    //String : 문자열객체
+    var str1 = 'Java_Script      ';
+    var str2 = new String('JavaScript');
+    console.log(str1.charAt(0));
+    console.log(str1.indexOf('a'));
+    console.log(str1.lastIndexOf('a'));
+    console.log(str1.includes('Script'));
+    console.log(str1.substr(4,3));
+    console.log(str1.substring(1,4));
+    console.log(str1.split('_'));
+    console.log(str1.replace('Java','Python'));
+    console.log(str1.trim());
+    console.log(str1.toUpperCase());
+    console.log(str1.toLowerCase());
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

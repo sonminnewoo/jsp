@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //버튼을 눌렀을때 현재시간이 출력되도록 만들어 보세요.
+      // window.onload = function(){}
+      document.addEventListener('DOMContentLoaded', function () {
+      var now = document.getElementById('now');
+      now.onclick = createMessage;
+        function createMessage(){
+          var dateObj = new Date();
+          var Message = {
+            year : dateObj.getFullYear(),
+            month : dateObj.getMonth()+1, // 0~ 11 로 계산해서 +1 계산 해줘야 한다 
+            date : dateObj.getDate(),
+            hours : dateObj.getHours(),
+            minutes : dateObj.getMinutes(),
+            nowDate : dateObj.toUTCString(),
+            // 영어로 출력
+            nowDate2 : dateObj.toLocaleString()
+            // 한글로 출력
+          }
+          for(i in Message){
+            console.log(Message[i]);
+          }
+          var main = document.getElementById('main');
+          // main 이라는 태그 요소를 변수처럼 만드는것
+          var message = document.createElement('p');
+          // createElement('p') 로 p 태그를 생성하는데
+          message.innerText = Message.nowDate2;
+          // message 안에 글을 넣는다, Message 함수 안에nowDate2 를 지정
+          main.append(message);
+          // 그 변수에 massage 를 추가
+        }
+      
+      })
+  </script>
+</head>
+<body>
+  <button id="now">nowtime</button>
+  <div id="main">
+
+  </div>
+</body>
+</html>

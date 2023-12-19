@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //인코딩, 디코딩 함수
+    var encodeStr = '자바스크립트';
+    console.log(encodeURIComponent(encodeStr));
+    var decodeStr = encodeURIComponent(encodeStr);
+    console.log(decodeURIComponent(decodeStr));
+    //숫자, 유한 무한 값 판별 함수
+    var num1 = '12';
+    if(isNaN(num1)){ // 숫자가 아니면 true
+      console.log('숫자 아님');
+    } else {
+      console.log('숫자')
+    }
+    var num2 = 1/0;
+    if(isFinite(num2)){ //유한값이면 true를 출력
+      console.log('유한값');
+    }else{
+      console.log('무한값');
+    }
+    // 숫자 , 문자 변환 함수
+    var num3 = '10px';
+    console.log( num3 +':'+ typeof num3)
+    // 문자를 숫자로 변환(숫자만 있을때)
+    console.log( Number(num3) +':'+ typeof Number(num3)) ;
+    var num4 = '100px';
+    console.log( num4 +':'+ typeof num4);
+    // 문자가 섞여있는 데이터를 숫자로 변환
+    console.log( parseInt(num4) +':'+ typeof parseInt(num4));
+    var num5 = '33.3%';
+    console.log( num5 +':'+ typeof num5);
+    // 문자가 섞여있는 소수점 데이터를 변환
+    console.log( parseFloat(num5) +':'+ typeof parseFloat(num5));
+    var num6 = 10;
+    console.log( num6 +':'+ typeof num6);
+    console.log( String(num6) +':'+ typeof String(num6));
+    var num7 = 10+parseInt('20px');
+    console.log( num7 +':'+ typeof num7);
+    //eval() : 문자열을 자바스크립트 코드로 변환
+    var str1 = 'var num8 = 10';
+    var str2 = 'var num9 = 20';
+    eval(str1);
+    eval(str2);
+    console.log(num8+num9);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

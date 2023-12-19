@@ -14,7 +14,7 @@
     </style>
     <script>
         // 이벤트 객체
-        window.onload = function() {
+        window.onmouseover = function() {
             var bt = document.getElementById('bt');
             var area = document.getElementById('area');
             bt.onclick = function(event){
@@ -26,6 +26,7 @@
                 console.log(event.screenY);
             }
             area.onmousedown = function(event){
+            //  마우스를 올렸을때 , 눌렀을때 에대한 이벤트 값을 로그에 남기게 된다
                 console.log(event.button);
             }
         }

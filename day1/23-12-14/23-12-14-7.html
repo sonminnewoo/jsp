@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if문</title>
+  <script>
+    var score = prompt('점수를 입력해주세요.','');
+    if(score>=60){
+      document.write('합격 입니다.');
+    }else if(score >= 40){
+      document.write('40점 이상입니다.');
+    }else{
+      document.write('불합격 입니다.');
+    }
+    document.write('<br>');
+    // html, css, javascript 점수를 입력 받아 평균이 60점 이상이면 합격이고 
+    // 각 과목이 40점 이상이어야 합격입니다. 그외에는 모두 불합격 입니다.
+    // 합격 : 평균 OO점으로 합격 입니다.
+    // 불합격 : HTML 40점 미만으로 불합격 입니다.
+    //          평균 60점 미만으로 불합격 입니다.
+    var htmlScore = Number(prompt('HTML점수를 입력해주세요.',''))
+    var cssScore = Number(prompt('CSS점수를 입력해주세요.',''))
+    var jsScore = Number(prompt('JavaScript점수를 입력해주세요.',''))
+    var avgScore = (htmlScore+cssScore+jsScore) / 3;
+    var comment = "";
+    if(avgScore>=60){
+      if(htmlScore<40){
+        comment = "HTML 40점 미만으로 불합격 입니다."
+      }else if(cssScore<40){
+        comment = "CSS 40점 미만으로 불합격 입니다."
+      }else if(jsScore<40){
+        comment = "JavaScript 40점 미만으로 불합격 입니다."
+      }else {
+        comment = "평균 "+avgScore+"점 으로 합격 입니다."
+      }
+    }else{
+      comment = "평균 "+avgScore+"점 으로 불합격 입니다."
+    }
+    document.write(comment);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
