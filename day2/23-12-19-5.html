@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            //  Number객체
+            // toFixed() : 소수점 자릿수(반올림) 를 출력하는 함수
+            var num1 = 10.1233;
+            console.log(num1.toFixed())
+            console.log(num1.toFixed(1))
+            console.log(num1.toFixed(2))
+
+            var num2 = new Number(12);
+            // toString(n) : n진수로 변환 
+            console.log(num2.toString())
+            console.log(num2.toString(2)) // 2진수 변환(표현)
+            console.log(num2.toString(16)) // 16진수 변환(표현) 0~9abcdef
+
+            // String : 문자열 객체
+            var str1 = 'JavaScript';
+            var str2 = new String('JavaScript');
+            console.log(str1.charAt(0));
+            // 문자열의 0번째 것을 출력하는것 
+            console.log(str1.indexOf('a'));
+            // 지정한 글에서 a 가 몇번째인지
+            console.log(str1.lastIndexOf('a'));
+            // 그다음 a 를 찾는것
+            console.log(str1.includes('script'));
+            // 대소문자 를 확인해서 있으면 true , 없으면 false
+            console.log(str1.substr(4,3));
+            // 4번째 인덱스에서 글자 3개 확인
+            console.log(str1.substring(1,4));
+            // 1번째 부터 4번째 라고 하면 1에서 3 가지 보여주는것
+            console.log(str1.split(''));
+            // 안에 공백을 기준으로 문자열을 나눠 준다
+            // 지금은 공백이니까 다나오고 '_' 해주면 띄어 줄때마다 반환해준다
+            console.log(str1.replace('Java','Python'));
+            // 위치를 바꿔준다 
+            console.log(str1.trim());
+            // 내용을 제외하고 공백을 지워준다
+            console.log(str1.toUpperCase());
+            // 대문자로 변환
+            console.log(str1.toLowerCase());
+            // 소문자로 변환
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var total = 0;
+
+        function sum(n) {
+            total += n;
+            alert(total);
+            console.log(total);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var bt = document.getElementById('bt');
+            bt.onclick = function () {
+                console.log('bt onclick 실행');
+            }
+
+            // 선언적 함수 
+            var bt = document.getElementById('bt');
+            function btclick(){
+                console.log('btclick 실행');
+            }
+
+            // 기본 이벤트 모델로 함수를 호출할 않아도 로드될때 한번 실행하게 됨
+            bt.onclick = btclick; // Remove the parentheses
+
+            var bt2 = document.getElementById('bt2');
+            bt2.onclick = btclick;
+            bt2.onclick = view2;
+
+            // 표준 이벤트 모델
+            var bt3 = document.getElementById('bt3');
+            function view2(){
+                console.log('view2 실행');
+            }
+            bt3.addEventListener('click', view2);
+            bt3.addEventListener('click', btclick);
+            // onclick 을 addEventListener , 을 사용 
+        });
+    </script>
+</head>
+<body>
+    <!-- 버튼 생성 -->
+    <!-- 전형적인 인라인 이벤트 모델: HTML 코드에 JavaScript 코드를 작성하여 실행 -->
+    <button onclick="console.log('ok')">OK</button>
+    <button onclick="sum(10);">SUM</button>
+    <!-- 기본 이벤트 모델: HTML 요소를 취득한 후 객체의 메서드 형식으로 연결 -->
+    <button id="bt">BT1</button>
+    <button id="bt2">BT2</button>
+    <button id="bt3">BT3</button>
+</body>
+</html>

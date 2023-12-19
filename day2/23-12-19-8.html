@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var dateObj = new Date(2022,9,30,10,30);
+        var dateInfo = {
+            year : dateObj.getFullYear(),
+            month : dateObj.getMonth()+1, // 0~ 11 로 계산해서 +1 계산 해줘야 한다 
+            date : dateObj.getDate(),
+            hours : dateObj.getHours(),
+            minutes : dateObj.getMinutes(),
+            nowDate : dateObj.toUTCString(),
+            // 영어로 출력
+            nowDate2: dateObj.toLocaleString()
+            // 한글로 출력
+        }
+        for(var i in dateInfo){
+            console.log(i + ':' + dateInfo[i])
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
