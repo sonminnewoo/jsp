@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //버튼을 눌렀을때 현재시간이 출력되도록 만들어 보세요.
+    // window.onload = function(){}
+    addEventListener('load', function(){
+      var bt = document.getElementById('bt');
+      bt.addEventListener('click',nowDate);
+      function nowDate(){
+        var now = new Date();
+        var message = document.createElement('p');
+        message.innerText = now.toLocaleString();
+
+        var wrap = document.getElementById('wrap');
+        wrap.append(message);
+      }
+    });
+    
+  </script>
+</head>
+<body>
+  <button id="bt">현재시간</button>
+  <div id="wrap"></div>
+</body>
+</html>

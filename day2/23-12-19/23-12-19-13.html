@@ -6,9 +6,9 @@
   <title>Document</title>
 </head>
 <body>
-  <button id="getstrArray">문자열 처리!</button>
   <h1>문자열 처리</h1>
   입력문자열 <input type="text" name="str" id="str"><button id="bt">클릭</button>
+     <!-- <input type="text" 로 텍스트 박스로 입력 받는다  -->
   <div>
     입력 문자 : <span id="str1"></span><br>
     입력 문자열 길이 : <span id="strLength"></span><br>
@@ -20,13 +20,9 @@
     1번째부터 5번째 까지 : <span id="oneToFiveStr"></span><br>
   </div>
   <script>
-    // 입력받은 문자열 처리
-
-
-    
-    //   // 이벤트 발생할때 사용할 함수를 위해 등록해준다
-      var getstrArray = document.getElementById('now');
-      document.addEventListener('click', function () {
+    //입력받은 문자열 처리하기
+    var bt = document.getElementById('bt');
+    bt.addEventListener('click', function(){
       var str = document.getElementById('str').value;
       console.log(str);
       document.getElementById('str1').innerText = str;
@@ -36,22 +32,8 @@
       document.getElementById('reverseStr').innerText = str.split("").reverse().join('');
       document.getElementById('firstStr').innerText = str.charAt(0);
       document.getElementById('thirdStr').innerText = str.charAt(2);
-      codument.getElementById('oneToFiveStr').innerText = str.substr(0,5);
-      });
+      document.getElementById('oneToFiveStr').innerText = str.substr(0,5);
+    });
   </script>
-
-  <div id="main">
-
-  </div>
-  
-  getstrArray.onclick = createMessage;
-  function createMessage(){
-    var strArray
-    var Massage = {
-      
-    }
-  }
-})`
-
 </body>
 </html>

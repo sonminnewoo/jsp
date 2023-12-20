@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+      var bt = document.getElementById('bt');
+      bt.onclick = function(){
+        //새로운 브라우저 창을 열어주는 함수
+        window.open(
+          'https://www.naver.com', // 주소
+          'naver', // 타이틀
+          'width=300, height=300, left=0, top=0,\
+           location=no, scrollbars=no,menubar=no,toolbar=no,status=no'
+        );//주소창,     스크롤바,      메뉴바,     툴바,      상태줄
+      }
+    }
+  </script>
+</head>
+<body>
+  <button id="bt">네이버</button>
+</body>
+</html>

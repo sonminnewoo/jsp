@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+      var frm = document.frm;
+      var date = new Date();
+      var year = date.getFullYear();
+      //연도 설정
+      for(var i=1900; i<=year; i++){
+        frm.y.add(new Option(i,i));
+      }
+      //월 설정
+      for(var i=1; i<=12; i++){
+        frm.m.add(new Option(i,i));
+      }
+      //일 설정
+      frm.m.onchange = calcDays;
+      frm.y.onchange = calcDays;
+      function calcDays(){
+        var month = Number(frm.m.value);
+        var day = 0;
+        switch(month){
+          case 1: case 3: case 5: case 7: case 8: case 10: case 12: day = 31; break;
+          case 4: case 6: case 9: case 11: day = 30; break;
+          case 2:
+            var year = Number(frm.y.value);
+            if(year%400==0 || year%4==0 && year%100!=0){
+              day = 29;
+            }else{day = 28;}
+            break;
+        }
+        frm.d.innerHTML = '';
+        frm.d.add(new Option('일 선택','#'));
+        for(var i=1; i<=day; i++){
+          frm.d.add(new Option(i,i));
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // frm.m.onchange = function(){
+      //   var day = 0;
+      //   var year = parseInt(frm.y.value);
+      //   switch(Number(frm.m.value)){
+      //   case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+      //     day=31;
+      //     break;
+      //   case 4: case 6: case 9: case 11:
+      //     day=30;
+      //     break;
+      //   case 2:
+      //     if(year%400==0 || year%4==0 && year%100!=0){
+      //       day=29;
+      //     }else{
+      //       day=28;
+      //     }
+      //     break;
+      //   }
+      //   var days = document.getElementsByName('d');
+      //   frm.d.innerHTML = '';
+      //   frm.d.add(new Option('일 선택','#'));
+      //   for(var i=1; i<=day; i++){
+      //     frm.d.add(new Option(i,i));
+      //   }
+      // }
+    }
+  </script>
+</head>
+<body>
+  <form action="#" name="frm">
+    <select name="y">
+      <option value="#">연도 선택</option>
+    </select>
+    <select name="m">
+      <option value="#">월 선택</option>
+    </select>
+    <select name="d">
+      <option value="#">일 선택</option>
+    </select>
+
+  </form>
+</body>
+</html>

@@ -27,13 +27,16 @@
             console.log(Message[i]);
           }
           var main = document.getElementById('main');
-          // main 이라는 태그 요소를 변수처럼 만드는것
+          // main 이라는 id 를 가진것에 을 main 라는 객체에 담고
           var message = document.createElement('p');
-          // createElement('p') 로 p 태그를 생성하는데
+          // createElement('p') 로 p 태그를 생성하고 , 그태그를 message 랄는 객체에 넣고
           message.innerText = Message.nowDate2;
-          // message 안에 글을 넣는다, Message 함수 안에nowDate2 를 지정
+          // message (p태그) 안에 글을 넣는다, Message 함수 안에nowDate2 를 . (함수안에 겍체를 바로지정
+          // 할수 없다 , 이렇게 함수.객체 로 지정해줘야 한다 그래야 그 객체값을 지정할수 있다)
+          // 그리고 생성한
           main.append(message);
-          // 그 변수에 massage 를 추가
+          // 그렇게 p 태그를 가진 message 안에 글을 넣는데 Message함수 안에 nowDate2 객체 의 값을 넣는다
+          // 그리고 main 이라는 id 를 가진 태그를 지정한 main 으로 넣는다 
         }
       
       })

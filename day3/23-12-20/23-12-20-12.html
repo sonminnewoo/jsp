@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+      var login = document.login;
+      login.onsubmit = function(){
+        //input,textarea 의 value값을 반환 
+        if(!login.id.value){
+          alert('아이디를 입력해주세요.');
+          //해당 태그에 포커스를 맞춰줍니다.
+          login.id.focus();
+          return false;
+        }
+        if(!login.pw.value){
+          alert('비밀번호를 입력해 주세요.');
+          login.pw.focus();
+          return false;
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <form action="#" method="post" name="login">
+    <div><label for="id">아이디</label><input type="text" name="id" id="id"></div>
+    <div><label for="pw">비밀번호</label><input type="password" name="pw" id="pw"></div>
+    <div><input type="submit" value="확인"></div>
+  </form>
+  
+</body>
+</html>

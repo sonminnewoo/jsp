@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var i = 0;
+    //정해진 시간마다 지정된 함수를 반복적으로 실행하는 함수
+    // var increase = setInterval(function(){
+    //   i++;
+    //   alert('1초 마다 실행'+i);
+    // }, 1000);
+    // window.onload = function(){
+    //   var bt = document.getElementById('bt');
+    //   bt.addEventListener('click',function(){
+    //     //setInterval 함수를 멈춤때 사용, setInterval 선언한 함수를 변수화하여 사용
+    //     clearInterval(increase);
+    //   });
+    // }
+    //정해진 시간이 흐른 뒤 지정한 함수를 한번만 실행하는 함수
+    var increase = setTimeout(function(){
+      i++;
+      alert('2초 마다 실행'+i);
+    },2000);
+    window.onload = function(){
+      var bt = document.getElementById('bt');
+      bt.addEventListener('click',function(){
+        //setTimeout 함수를 멈춤때 사용, setTimeout 선언한 함수를 변수화하여 사용
+        clearTimeout(increase);
+      });
+    }
+  </script>
+</head>
+<body>
+  <button id="bt">중지</button>
+</body>
+</html>

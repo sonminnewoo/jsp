@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var frm = document.frm;
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth();
+            var day = date.getDay();
+            // 연도 설정 
+            for(var i=1900; i<=year; i++){
+                frm.y.add(new Option(i,i));
+            }
+            // 월 설정
+            for(var i=1; i<=month+1; i++){
+                frm.m.add(new Option(i,i));
+            }
+            // 일 설정
+            for(var i=31; i>=day-3; i--){
+                frm.d.add(new Option(i,i));
+                console
+            }
+            // 온체인지 
+        }
+    </script>
+</head>
+<body>
+    <form action="#" name="frm">
+        <select name="y">
+            <option value="#">연도 선택</option>
+        </select>
+        <select name="m">
+            <option value="#">월 선택</option>
+        </select>
+        <select name="d">
+            <option value="#">일 선택</option>
+        </select>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //DOM(Document Object Model) : doucument 객체 : HTML태그를 선택,생성,수정,삭제
+    // document.getElementById() : 태그의 id속성을 사용하여 태그를 선택(한개)
+    // document.getElementsByClassName() : 태그의 class속성을 사용하여 태그들을 선택(여러개)
+    // document.getElementsByTagName() : 태그의 이름을 사용하여 태그들을 선택(여러개)
+    // document.getElementsByName() : 태그의 name속성을 사용하여 태그들을 선택(여러개)
+    // document.querySelector() : css의 선택방법을 사용하여 태그를 선택(한개)
+    // document.querySelectorAll() : css의 선택방법을 사용하여 태그들을 선택(여러개)
+    window.onload = function(){
+      var list1 = document.querySelector('#box1 > ul > li');
+      var list2 = document.querySelectorAll('#box2 > ul > li');
+      var classHead = document.getElementsByClassName('head');
+      console.log(classHead);
+      console.log(list1);
+      console.log(list2);
+      classHead[0].style.background = '#000';
+      list1.style.background = '#000';
+      list2[0].style.background = '#ccc';
+      list2.item(1).style.background = '#ddd';
+    }
+  </script>
+</head>
+<body>
+  <h1 id="head" class="head" name="head">head</h1>
+  <h1 id="head2" class="head" name="head">head2</h1>
+  <div id="box1">
+    <ul>
+      <li>내용1</li>
+      <li>내용2</li>
+      <li>내용3</li>
+    </ul>
+  </div>
+  <div id="box2">
+    <ul>
+      <li>내용4</li>
+      <li>내용5</li>
+      <li>내용6</li>
+    </ul>
+  </div>
+</body>
+</html>

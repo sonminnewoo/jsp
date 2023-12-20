@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      position: relative;
+      left: 100px;
+      top: 10px;
+      width: 200px;
+      height: 200px;
+      background: #718c00;
+    }
+  </style>
+  <script>
+    function createEle(){
+      var bt = document.getElementById('bt');
+      function popup(){
+        var div = document.createElement('div');
+        var p = document.createElement('p');
+        // var a = document.createElement('a');
+        // a.innerText = '링크';
+        // a.setAttribute('href','https://www.naver.com');
+        // a.setAttribute('target','_blank');
+        // a.setAttribute('title','새창');
+        // p.appendChild(a);
+        p.innerHTML = '<a href="https://www.naver.com" target="_blank" title="새창">링크</a>';
+        div.appendChild(p);
+        document.body.appendChild(div);
+      }
+      bt.onclick = popup;
+    }
+    addEventListener('load',createEle);
+  </script>
+</head>
+<body>
+  <button id="bt">요소생성</button>
+</body>
+</html>

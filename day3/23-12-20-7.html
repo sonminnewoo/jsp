@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 페이지 정보,STYLE,SCRIPT 영역 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var gnb = document.getElementById('gnb');
+            console.log(gnb.parentNode); // 부모 태그를 선택
+            console.log(gnb.children[0]);// 자식 태그들을 선택
+            console.log(gnb.children[0].children[0]); //자식 태그의 자식태그
+            console.log(gnb.children[0].children[0].nextElementSibling); // 그 다음 형제 태그를 선택
+            console.log(gnb.children[0].children[2].previousElementSibling);// 이전 형제 태그를 선택
+            // 엔터키를 인색해 첫번째 자식을 돌려주기 때문에 주의할것 
+            console.log(gnb.children[0].firstChild); // 첫번째 자식 태그
+            console.log(gnb.children[0].lastChild); // 마지막 자식 태그
+            console.log(gnb.children[0].tagName);//태그 이름
+            console.log(gnb.children[0].children[0].firstChild.nodeValue); // 태그 값
+            console.log(gnb.children[0].children[0].nodeType);// 태그타입 : 1:태그,2:속성,3:텍스트
+            console.log(gnb.id); // id값
+            console.log(gnb.children[0].children[0].className); // class값
+        }
+    </script>
+</head>
+<body>
+    <!-- HTML 태그 영역 -->
+    <div>
+        <!-- 위 div 태그를 상대위치로 찾는것 -->
+        <nav id="gnb">
+            <ul><li class="first">내용1</li>
+                <li>내용2</li>
+                <li>내용3</li></ul>
+        </nav>
+    </div>
+</body>
+</html>

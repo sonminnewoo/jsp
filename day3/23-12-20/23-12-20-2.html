@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #outer{
+      background: #ff0000;
+      padding: 20px;
+    }
+    #inner{
+      background: #00ff00;
+      padding: 20px;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      var outer = document.getElementById('outer');
+      var inner = document.getElementById('inner');
+      //이벤트 버블링 : 부모요소와 자식요소 모두에 이벤트가 연결되어 있을때
+      // 자식요소 이벤트를 실행할 경우 부모요소 이벤트도 함께 실행되는 현상
+      // stopPropagation() : 이벤트 버블링 막아주는 함수
+      outer.onclick = function(){
+        alert('부모 이벤트');
+      }
+      inner.onclick = function(event){
+        alert('자식 이벤트');
+        event.stopPropagation();
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="outer">
+    <p id="inner"></p>
+  </div>
+</body>
+</html>

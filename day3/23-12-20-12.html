@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var login = document.login;
+            // document 에서 login 기능을 호출 login에
+            // 로그인은 onsubmit 을 누르면 실행 
+            login.onsubmit = function(){
+                // input,textarea 의 value 값 반환
+                if(!login.id.value){
+                    alert('아이디를 입력해주세요');
+                    // alert 철자를 !!!! 계속 alter 로 하고있다 !! 주의해라 손민우
+                    // 해당태그에 포커스를 맞춰준다
+                    login.id.focus();
+                    return false;
+                    // 마냑 잘못된값이 있는데 확인했다면 그냥 링크로 들어가 게되었을것 
+                }
+                
+                if(!login.pw.value){
+                    alert('비밀번호를 입력하세요 를 입력해주세요');
+                    login.pw.focus();
+                    return false;
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form action="#" method="post" name="login">
+        <div><label for="id">아이디</label><input type="text" name="id" id="id"></div>
+        <div><label for="pw">비밀번호</label><input type="password" name="pw" id="pw"></div>
+        <div><input type="submit" value="확인"></div>
+    </form>
+</body>
+</html>

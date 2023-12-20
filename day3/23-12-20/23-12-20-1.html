@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+      var naver = document.getElementById("naver");
+      //onclick 실행 후 a태그의 주소이동이 실행됨
+      naver.onclick = function(event){
+        alert('네이버');
+        //preventDefault() : 태그의 기본 이벤트를 막아주는 함수
+        //event.preventDefault();
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div><a href="https://www.naver.com" id="naver">네이버</a></div>
+</body>
+</html>
