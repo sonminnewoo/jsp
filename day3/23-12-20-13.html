@@ -7,24 +7,25 @@
     <script>
         window.onload = function(){
             var frm = document.frm;
+            // form 태그의 name 에 해당 frm 을 frm 을 넣어 준다
             var date = new Date();
+            // 데이터 형식을 date 에 넣는다
             var year = date.getFullYear();
             var month = date.getMonth();
             var day = date.getDay();
+
             // 연도 설정 
             for(var i=1900; i<=year; i++){
                 frm.y.add(new Option(i,i));
             }
             // 월 설정
-            for(var i=1; i<=month+1; i++){
+            for(var i=1; i<=12; i++){
                 frm.m.add(new Option(i,i));
             }
             // 일 설정
             for(var i=31; i>=day-3; i--){
                 frm.d.add(new Option(i,i));
-                console
             }
-            // 온체인지 
         }
     </script>
 </head>
@@ -39,7 +40,6 @@
         <select name="d">
             <option value="#">일 선택</option>
         </select>
-
     </form>
 </body>
 </html>
