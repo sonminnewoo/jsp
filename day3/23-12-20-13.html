@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        window.onload = function(){
+        window.onload = function () {
             var frm = document.frm;
             // form 태그의 name 에 해당 frm 을 frm 을 넣어 준다
             var date = new Date();
@@ -15,20 +16,21 @@
             var day = date.getDay();
 
             // 연도 설정 
-            for(var i=1900; i<=year; i++){
-                frm.y.add(new Option(i,i));
+            for (var i = 1900; i <= year; i++) {
+                frm.y.add(new Option(i, i));
             }
             // 월 설정
-            for(var i=1; i<=12; i++){
-                frm.m.add(new Option(i,i));
+            for (var i = 1; i <= 12; i++) {
+                frm.m.add(new Option(i, i));
             }
             // 일 설정
-            for(var i=31; i>=day-3; i--){
-                frm.d.add(new Option(i,i));
+            for (var i = 31; i >= day - 3; i--) {
+                frm.d.add(new Option(i, i));
             }
         }
     </script>
 </head>
+
 <body>
     <form action="#" name="frm">
         <select name="y">
@@ -42,4 +44,5 @@
         </select>
     </form>
 </body>
+
 </html>
