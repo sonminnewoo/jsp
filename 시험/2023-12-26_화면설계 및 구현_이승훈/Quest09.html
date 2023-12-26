@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // #testB 내부의 .sImg div 요소들을 선택
+        var previewImages = document.querySelectorAll('#testB .sImg div');
+        // #testB 내부의 .bigImg img 요소들을 선택
+        var bigImages = document.querySelectorAll('#testB .bigImg img');
+
+        // previewImages 배열의 각 요소에 대해 반복
+        previewImages.forEach(function (preview, index) {
+            // 클릭 이벤트 리스너를 추가
+            preview.addEventListener('click', function () {
+                // previewImages 배열의 모든 요소의 테두리 스타일을 초기화
+                previewImages.forEach(function (img) {
+                    img.style.border = 'none';
+                });
+                // 클릭된 요소의 테두리 스타일을 변경
+                preview.style.border = '5px solid red';
+
+                // bigImages 배열의 모든 요소를 숨김
+                bigImages.forEach(function (img) {
+                    img.style.display = 'none';
+                });
+                // 클릭된 요소에 해당하는 이미지를 표시
+                bigImages[index].style.display = 'block';
+            });
+        });
+    });
+	</script>
+</head>
+
+<body>
+	<div id="wrapAll">
+		<div class="title2">문제9) </div>
+		<div id="testB">
+			<div class="bigImg"><img src="img/img_b.jpg" alt="1"><img src="img/img_n.jpg" alt="2"><img src="img/img_navy.jpg"
+					alt="3"><img src="img/img_r.jpg" alt="4"></div>
+			<div class="sImg">
+				<div id="sImg1"></div>
+				<div id="sImg2"></div>
+				<div id="sImg3"></div>
+				<div id="sImg4"></div>
+			</div>
+		</div>
+    </div>
+</body>
+
+</html>

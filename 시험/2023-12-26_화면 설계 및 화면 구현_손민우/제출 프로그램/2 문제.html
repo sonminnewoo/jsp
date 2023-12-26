@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2번 문제</title>
+    <style>
+        .wrap{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: darkslategrey;
+            padding-bottom: 70px;
+        }
+
+        header nav ul {
+            background-color: darkslategrey;
+            list-style: none;
+        }
+
+        header nav ul li {
+            float: right;
+            margin: 0 20px;
+            font-size: 30PX;
+        }
+        header nav ul li:hover {
+            color: beige;
+            transition: 0.3s;
+        }
+        section {
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+        padding: 0px;
+        font-size: 15px;
+        }
+        .justify1 {
+        justify-content: flex-start;
+        padding: 0px;
+        margin: 0px;
+        } 
+        .justify2 {
+        width: 350px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        }
+        #main-container {
+            /* margin: 0px;
+            padding: 0px; */
+            width: 1000px;
+            height: 300px;
+            /* 가져오는 이미지 크기만큼만 지정  */
+        }
+
+        #one{
+            background-color: cadetblue;
+        }
+        #two{
+            background-color: cornflowerblue;
+        }
+        #one1{
+            background-color: cadetblue;
+        }
+        #two1{
+            background-color: mediumslateblue;
+        }
+
+        section {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 20;
+        font-size: 15px;
+        }
+        #main-container {
+            padding: 0px;
+            margin: 0px;
+            display: block;
+        }
+        #three {
+            display: flex;
+            gap: 0;
+            flex-shrink: 0;
+        }
+
+        #one1,
+        #two1 {
+            margin: 0;
+            padding: 5px; /* 추가: 내용이 있으므로 padding을 주어 간격이 좁혀지도록 함 */
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: darkseagreen;
+            margin: 0;
+            padding: 20px;
+        }
+
+        footer p {
+            text-align: center;
+            margin: 20;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <header>
+        <h1>Header Area</h1>
+        <nav>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>JQuery</li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main-container">
+    </div>
+    <section class="justify1"> <!--컨테인 : 플렉스를 지정하는 것 , 감싸는것-->
+        <div id="one">
+            <h1>Section A</h1>
+            <P>녹차는 은은한 향을 좋아하는 사람들이 애용하는<br>
+            차이다. 녹차를 마실 줄 모르는 사람들은 티백들<br>
+            을 모두 뜯어 주전자에 넣고 끓이기도 하는데 강<br>
+            한차의 향기도 견디기 힘들겠지만 보관도 힘들고 <br>
+            그때그때 방금 끓인듯한 맛을 느끼지 못하게 되<br>
+            며 진한 카페인덕에 밤에 잠들기도 힘들것이다
+            </P>
+        </div>
+        <div id="two">
+            <h1>Section A</h1>
+            <P>커피는 독한 향을 좋아하는 사람도 매우 좋아하<br>
+            며 심한 경우 태어나기 전부터 커피를 마신 듯 강<br>
+            한 중독 증세를 보이는 경우가 많다. 심지어 원두<br>
+            를 씹어서 향에 자신을 담그는 사람도 있고 설탕,<br>
+            시럽등 다른 조미를 절대로 허락하지 않는 오직<br>
+            커피맛만을 고집하는 마니아들이 늘고 있다.
+            </P>
+        </div>
+        <div id="three">
+            <section class="justify2">
+                <div id="one1">
+                <h1>Article A</h1>
+                <P>너무 화려하지 않으며 고귀한 느낌을 가<br>
+                지고 있다. 붉은 색이 단연 으뜸이며 한<br>
+                송이만 있어도 빼어나다.
+                </P>
+                </div>
+                <div id="two1">
+                <h1>Article B</h1>
+                <P>드물게 푸른색을 띠고 있으며 작지만 시<br>
+                원해 보이는 어린 꽃이라고 할 수 있다.<br>
+                여럿이 함께 있을때 더욱 아름답다
+                </P>
+                </div>
+            </section>
+        </div>
+    </section>
+    <footer>
+        <h1>Footer Area</h1>
+        <p>[부산IT교육센터] 부산광역시 부산진구 중앙대로 708 부산파이낸스센터 4F, 5F 부산IT교육센터 T_051.753.5600</p>
+        <p>COPYRIGHT &copy; BUSAN HUMAN RESOURCES DEVELOPMENT INSTITUTE. All rights reserverd. </p>
+    </footer>
+</div>
+<script>
+
+    var mainContainer = document.getElementById('main-container');
+    var imageUrl = 'https://via.placeholder.com/1000x300'; 
+
+    var imgElement = document.createElement('img');
+    imgElement.src = imageUrl;
+
+    imgElement.style.width = '100%';
+    imgElement.style.height = 'auto';
+    imgElement.style.margin = '0px';
+
+    mainContainer.appendChild(imgElement);
+</script>
+</body>
+</html>

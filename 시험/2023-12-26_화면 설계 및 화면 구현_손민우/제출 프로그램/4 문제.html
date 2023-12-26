@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.selected { color: red; }
+	</style>
+    <script>
+             document.addEventListener('DOMContentLoaded', function () {
+            var tabButtons = document.querySelectorAll('#testD .tabBtn li');
+            var tabs = document.querySelectorAll('#testD #tabContainer div');
+
+            tabButtons.forEach(function (button, index) {
+                button.addEventListener('click', function () {
+                    tabButtons.forEach(function (btn) {
+                        btn.classList.remove('on');
+                    });
+                    button.classList.add('on');
+                    tabs.forEach(function (tab) {
+                        tab.classList.remove('on');
+                    });
+                    tabs[index].classList.add('on');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+	<div id="wrapAll">
+		<div class="title4">문제10) </div>
+		<div id="testD">
+			<div id="tabContainer">
+				<div class="tabA on">
+					<p>Fron-End</p>
+				</div>
+				<div class="tabB">
+					<p>Back-End</p>
+				</div>
+				<div class="tabC">
+					<p>Big DATA</p>
+				</div>
+				<div class="tabD">
+					<p>Project</p>
+				</div>
+			</div>
+			<ul class="tabBtn">
+				<li class="on">tBtnA</li>
+				<li>tBtnB</li>
+				<li>tBtnC</li>
+				<li>tBtnD</li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+
+</html>
