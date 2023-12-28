@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>회원가입</title>
+    <style>
+      /* CSS 스타일시트 */
+      body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+      }
+      
+      #header h1 {
+        margin: 0;
+        font-size: 36px;
+        text-align: center;
+      }
+      
+      #container {
+        margin: 50px auto;
+        max-width: 1000px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+      
+      form label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      form input {
+        display: block;
+        width: 97%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      form input[type='checkbox'] {
+        display: inline-block;
+      }
+      
+      form input[type='radio'] {
+        width: 40%;
+        display: inline;
+      }
+
+      form button {
+        display: inline-block;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      form button:hover {
+        background-color: #555;
+      }
+      p{
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>로그인</h1>
+    </div>
+    
+    <div id="container">
+      <form action="#" method="get">
+        <label for="id">아이디</label>
+        <input type="text" id="userid" name="id">
+
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password">
+
+        <!-- <label for="password">비밀번호 재확인</label>
+        <input type="password" id="password" name="password">
+        
+        <label for="username">이름</label>
+        <input type="text" id="username" name="username">
+
+        <label for="gender">성별</label>
+        <span>남성</span> <input type="radio" name="gender" >
+        <span>여성</span> <input type="radio" name="gender" >
+        
+        
+        <label for="email">이메일</label> 
+        <input type="email" id="email" name="email">
+        
+        <label for="tel">휴대전화</label>
+        <input type="tel" id="tel" name="tel">
+
+        <label for="new">가입 동의</label> 
+        <input type="checkbox" id="new" name="new">
+-->
+        <p><button type="submit">로그인</button></p>
+        <!-- <button type="reset">초기화</button>  -->
+      </form>
+    </div>
+  </body>
+</html>

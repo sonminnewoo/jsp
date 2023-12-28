@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin:0px; padding: 0; box-sizing: border-box;}
+        #wrap {
+            display: grid;
+            width: 1000px;
+            height: 750px;
+            margin: 0 auto;
+            grid-template-rows: 12% 70% 12%;
+            
+        }
+        .pad{padding: 10px;}
+        /* header area */
+        header {
+            grid-row-start: 1; grid-row-end: 2;
+            background-color: #78909C;
+        }
+        h1 {
+            grid-column-start: 1; grid-column-end: 2;
+        }
+
+        nav {
+            float: right;
+        }
+        li {
+            list-style-type: none;
+            float:left;
+            margin: 10px 20px 0 0;
+        }
+        a{ 
+            font-size: 25px; color: black; padding: 10px;
+            text-decoration: none; text-align: center; 
+            transition: 1s;
+        }
+        a:hover { color: aliceblue; text-decoration: underline;}
+
+        /* container area */
+        #container {
+            grid-row-start: 2; grid-row-end: 3;
+            display: grid;
+            grid-template-columns: 350px 350px 300px;
+            grid-template-rows: 300px 112.5px 112.5px;
+        }
+        #section0 {grid-column-start: 1; grid-column-end: 4; grid-row-start: 1; grid-row-end: 2;}
+        #section1 {grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 4; background-color: #90A4AE;}
+        #section2 {grid-column-start: 2; grid-column-end: 3; grid-row-start: 2; grid-row-end: 4; background-color: #87c1dd;}
+        #article1 {grid-column-start: 3; grid-column-end: 4; grid-row-start: 2; grid-row-end: 3; background-color: #729eb4;}
+        #article2 {grid-column-start: 3; grid-column-end: 4; grid-row-start: 3; grid-row-end: 4; background-color: #55688c;}
+
+        /* footer area */
+        footer {
+            grid-row-start: 3; grid-row-end: 4;
+            background-color: rgb(173, 211, 218);
+            
+        }
+        p{
+            font-size: 15px;
+            text-align: justify;
+            padding: 10px;
+        }
+
+        h2 { padding-left:10px }
+        h3 { padding-left:10px }
+        footer p{
+            text-align: center;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1>Haeder Area</h1>
+            <nav>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">JQuery</a></li>
+            </nav>
+        </header>
+        <div id="container">
+            <section id="section0">
+                <img src="https://via.placeholder.com/1000x300" alt="슬라이드">
+            </section>
+            <section id="section1">
+                <h2>Section A</h2>
+                <p>녹차는 은은한 향을 좋아하는 사람들이 애용하는 차이다. 녹차를 마실 줄 모르는 사람들은 티백들을 모두 뜯어 주전자에 넣고 끊이기도 하는데 강한차의 향기도 견디기 힘들겠지만 보관도 힘들고 그때그때 방금 끊인 듯한 맛을 느끼지 못하게 되며 진한 카페인덕에 밤에 잠들기도 힘들 것이다.</p>
+            </section>
+            <section id="section2">
+                <h2>Section B</h2>
+                <p>커피는 독한 향을 좋아하는 사람도 매우 좋아하며 심한 경우 태어나기 전부터 커피를 마신 듯 강한 중독 증세를 보이는 경우가 많다. 심지어 원두를 씹어서 향에 자신을 담그는 사람도 있고 설탕, 시럽 등 다른 조미를 절대로 허락하지 않는 오직 커피맛만을 고집하는 마니아들이 늘고 있다.</p>
+            </section>
+            <article id="article1">
+                <h3>Article A</h3>
+                <p>너무 화려하지 않으며 고귀한 느낌을 가지고 있다. 붉은 색이 단연 으뜸이며 한 송이만 있어도 빼어나다.</p>
+            </article>
+            <article id="article2">
+                <h3>Article B</h3>
+                <p>드물게 푸른색을 띠고 있으며 작지만 시원해 보이는 어린 꽃이라고 할 수 있다. 여럿이 함께 있을때 더욱 아름답다</p>
+            </article>
+        </div>
+        <footer>
+            <h2>Footer Area</h2>
+            <p>[부산IT교육센터] 부산광역시 부산진구 중앙대로 708 부산파이낸스센터 4F, 5F 부산IT교육센터 T_ 051.753.5600 <br>
+                COPYRIGHT Ⓒ BUSAN HUMAN RESOURCES DEVELOPMENT INSTITUTE. All rights reserverd.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
